@@ -5,7 +5,9 @@ extern crate regex;
 extern crate protoc_rust;
 extern crate pretty_env_logger;
 
-mod errors { error_chain!{} }
+mod errors {
+    error_chain!{ }
+}
 use errors::*;
 
 use std::fs::{File, OpenOptions};
@@ -14,12 +16,14 @@ use std::ffi::OsString;
 use std::io::{BufReader, BufRead};
 use std::path::{Path, PathBuf};
 use std::io::Write;
+use std::process::Command;
 
 use regex::Regex;
 
 lazy_static! {
     static ref DOTA_PROTO_ROOT: PathBuf = PathBuf::from(concat!(env!("CARGO_MANIFEST_DIR"), "/../"));
-    static ref PROTOBUF_FOLDER: PathBuf = DOTA_PROTO_ROOT.join("GameTracking-Dota2/Protobufs/");
+    static ref GAMETRACKING_FOLDER: PathBuf = DOTA_PROTO_ROOT.join("GameTracking-Dota2");
+    static ref PROTOBUF_FOLDER: PathBuf = GAMETRACKING_FOLDER.join("Protobufs");
     static ref CRATE_FOLDER: PathBuf = DOTA_PROTO_ROOT.join("generated");
     static ref PROTO_TMP: PathBuf = CRATE_FOLDER.join("dota_proto");
 }
@@ -212,9 +216,30 @@ fn generate_maincrate(proto_paths: &Vec<PathBuf>) -> Result<()> {
 
 }
 
+fn update_repository() -> Result<()> {
+    let git_dir_arg = format!("--git-dir={}", GAMETRACKING_FOLDER.to_string_lossy());
+
+    let res = Command::new("git")
+        .args(&[&git_dir_arg, "pull"])
+        .status();
+
+    if res.is_ok() {
+        return Ok(());
+    }
+
+    Command::new("git")
+        .args(&[&git_dir_arg, "clone", ""])
+        .status()
+        .chain_err(|| "Failed to clone")?;
+
+    Ok(())
+}
+
 fn generate() -> Result<()> {
     pretty_env_logger::init()
         .chain_err(|| "Could not initialize logger")?;
+
+    update_repository().chain_err(|| "Failed to update repository")?;
 
     fs::remove_dir_all(&*PROTO_TMP)
         .or_else(|e| if e.kind() == std::io::ErrorKind::NotFound { return Ok(());} else {return Err(e); })
