@@ -1,0 +1,6 @@
+ [package]
+name = "steamdatagram_auth_messages" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"

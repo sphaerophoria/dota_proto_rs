@@ -1,0 +1,7 @@
+ [package]
+name = "networkbasetypes" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"
+network_connection = { path = "../network_connection" }

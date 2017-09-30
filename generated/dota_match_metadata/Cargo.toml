@@ -1,0 +1,8 @@
+ [package]
+name = "dota_match_metadata" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"
+base_gcmessages = { path = "../base_gcmessages" }
+dota_gcmessages_common_match_management = { path = "../dota_gcmessages_common_match_management" }

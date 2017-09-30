@@ -1,0 +1,7 @@
+ [package]
+name = "gcsdk_gcmessages" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"
+steammessages = { path = "../steammessages" }

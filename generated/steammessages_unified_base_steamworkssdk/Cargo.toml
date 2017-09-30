@@ -1,0 +1,6 @@
+ [package]
+name = "steammessages_unified_base_steamworkssdk" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"

@@ -1,0 +1,8 @@
+ [package]
+name = "dota_gcmessages_client_watch" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"
+dota_shared_enums = { path = "../dota_shared_enums" }
+dota_gcmessages_common = { path = "../dota_gcmessages_common" }

@@ -1,0 +1,6 @@
+ [package]
+name = "dota_hud_types" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"

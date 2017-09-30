@@ -1,0 +1,8 @@
+ [package]
+name = "c_peer2peer_netmessages" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"
+netmessages = { path = "../netmessages" }
+networkbasetypes = { path = "../networkbasetypes" }

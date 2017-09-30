@@ -1,0 +1,7 @@
+ [package]
+name = "steamdatagram_messages" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"
+steamdatagram_auth_messages = { path = "../steamdatagram_auth_messages" }

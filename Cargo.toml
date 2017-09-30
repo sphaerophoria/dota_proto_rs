@@ -1,0 +1,9 @@
+[package]
+authors = ["Mick Sayson <mick@sayson.com>"]
+name = "dota_proto"
+version = "0.1.0"
+
+[build-dependencies]
+
+[dependencies.dota_proto_generated]
+path = "dota_proto_generated"

@@ -1,0 +1,53 @@
+ [package]
+name = "dota_proto_generated" 
+version = "0.1.0" 
+
+[dependencies] 
+dota_match_metadata = { path = "../generated/dota_match_metadata" }
+gametoolevents = { path = "../generated/gametoolevents" }
+dota_broadcastmessages = { path = "../generated/dota_broadcastmessages" }
+base_gcmessages = { path = "../generated/base_gcmessages" }
+dota_hud_types = { path = "../generated/dota_hud_types" }
+gcsdk_gcmessages = { path = "../generated/gcsdk_gcmessages" }
+dota_gcmessages_server = { path = "../generated/dota_gcmessages_server" }
+demo = { path = "../generated/demo" }
+c_peer2peer_netmessages = { path = "../generated/c_peer2peer_netmessages" }
+netmessages = { path = "../generated/netmessages" }
+networkbasetypes = { path = "../generated/networkbasetypes" }
+dota_gcmessages_client_match_management = { path = "../generated/dota_gcmessages_client_match_management" }
+usermessages = { path = "../generated/usermessages" }
+dota_clientmessages = { path = "../generated/dota_clientmessages" }
+dota_gcmessages_client = { path = "../generated/dota_gcmessages_client" }
+dota_usermessages = { path = "../generated/dota_usermessages" }
+gameevents = { path = "../generated/gameevents" }
+steammessages_oauth_steamworkssdk = { path = "../generated/steammessages_oauth_steamworkssdk" }
+te = { path = "../generated/te" }
+dota_gcmessages_client_team = { path = "../generated/dota_gcmessages_client_team" }
+dota_gcmessages_client_fantasy = { path = "../generated/dota_gcmessages_client_fantasy" }
+steammessages_unified_base_steamworkssdk = { path = "../generated/steammessages_unified_base_steamworkssdk" }
+dota_gcmessages_msgid = { path = "../generated/dota_gcmessages_msgid" }
+dota_gcmessages_client_chat = { path = "../generated/dota_gcmessages_client_chat" }
+dota_gcmessages_client_tournament = { path = "../generated/dota_gcmessages_client_tournament" }
+steammessages_cloud_steamworkssdk = { path = "../generated/steammessages_cloud_steamworkssdk" }
+gcsystemmsgs = { path = "../generated/gcsystemmsgs" }
+steammessages_publishedfile_steamworkssdk = { path = "../generated/steammessages_publishedfile_steamworkssdk" }
+steamdatagram_messages = { path = "../generated/steamdatagram_messages" }
+steammessages_base = { path = "../generated/steammessages_base" }
+econ_gcmessages = { path = "../generated/econ_gcmessages" }
+dota_gcmessages_common_match_management = { path = "../generated/dota_gcmessages_common_match_management" }
+network_connection = { path = "../generated/network_connection" }
+dota_shared_enums = { path = "../generated/dota_shared_enums" }
+steamdatagram_auth_messages = { path = "../generated/steamdatagram_auth_messages" }
+dota_modifiers = { path = "../generated/dota_modifiers" }
+dota_gcmessages_client_guild = { path = "../generated/dota_gcmessages_client_guild" }
+connectionless_netmessages = { path = "../generated/connectionless_netmessages" }
+uifontfile_format = { path = "../generated/uifontfile_format" }
+steammessages = { path = "../generated/steammessages" }
+dota_commonmessages = { path = "../generated/dota_commonmessages" }
+econ_shared_enums = { path = "../generated/econ_shared_enums" }
+dota_gcmessages_client_watch = { path = "../generated/dota_gcmessages_client_watch" }
+dota_client_enums = { path = "../generated/dota_client_enums" }
+networksystem_protomessages = { path = "../generated/networksystem_protomessages" }
+clientmessages = { path = "../generated/clientmessages" }
+dota_gcmessages_common_bot_script = { path = "../generated/dota_gcmessages_common_bot_script" }
+dota_gcmessages_common = { path = "../generated/dota_gcmessages_common" }

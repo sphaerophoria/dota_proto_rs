@@ -1,0 +1,13 @@
+[package]
+authors = ["Mick Sayson <mick@sayson.com>"]
+name = "generate"
+version = "0.1.0"
+
+[dependencies]
+error-chain = "0.11.0"
+lazy_static = "0.2.8"
+log = "0.3.8"
+pretty_env_logger = "0.1.1"
+protoc-rust = "1.4.1"
+regex = "0.2.1"
+tempdir = "0.3.5"

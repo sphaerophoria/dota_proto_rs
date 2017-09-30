@@ -1,0 +1,12 @@
+ [package]
+name = "dota_gcmessages_server" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"
+steammessages = { path = "../steammessages" }
+dota_shared_enums = { path = "../dota_shared_enums" }
+dota_gcmessages_common = { path = "../dota_gcmessages_common" }
+econ_gcmessages = { path = "../econ_gcmessages" }
+network_connection = { path = "../network_connection" }
+dota_gcmessages_common_match_management = { path = "../dota_gcmessages_common_match_management" }

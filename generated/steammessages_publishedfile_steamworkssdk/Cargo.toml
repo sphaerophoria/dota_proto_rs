@@ -1,0 +1,7 @@
+ [package]
+name = "steammessages_publishedfile_steamworkssdk" 
+version = "0.1.0" 
+
+[dependencies] 
+protobuf = "1.4.1"
+steammessages_unified_base_steamworkssdk = { path = "../steammessages_unified_base_steamworkssdk" }
